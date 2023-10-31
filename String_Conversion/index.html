@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Conversion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+      }
+      #container {
+        height: 100vh;
+        width: 75vw;
+        margin: auto;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .string-div {
+        padding: 15px;
+        background-color: #76dc1c;
+      }
+      .string-div > sup {
+        position: absolute;
+        margin: -35px;
+        padding: 6px;
+        font-size: 0.9rem;
+        background-color: #2a1ff4;
+        color: #fff;
+      }
+      #form {
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+        background-color: #76dc1c;
+      }
+      #form-div {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 6px;
+        font-size: 1.2rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+      }
+      #form-div > input {
+        border-radius: 5px;
+        border-style: none;
+        padding: 5px;
+        font-size: 1rem;
+        width: 60%;
+      }
+      #input-box-submit-btn {
+        border-radius: 5px;
+        border-style: none;
+        padding: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+    </style>
+    <script src="/String_Conversion/script.js" defer></script>
+  </head>
+  <body>
+    <div id="container">
+      <form id="form">
+        <div id="form-div">
+          <label for="input-box">Enter any random text </label>
+          <input type="text" id="input-box" required autofocus />
+          <button type="submit" id="input-box-submit-btn">Submit</button>
+        </div>
+      </form>
+
+      <div class="string-div">
+        <sup>lower-case</sup>
+        <span id="lower-case">text in lower case will appear here</span>
+      </div>
+      <div class="string-div">
+        <sup>upper-case</sup>
+        <span id="upper-case">TEXT IN UPPER CASE WILL APPEAR HERE</span>
+      </div>
+      <div class="string-div">
+        <sup>camel-case</sup>
+        <span id="camel-case">textIncamelCasewillAppearhere</span>
+      </div>
+      <div class="string-div">
+        <sup>kebab-case</sup>
+        <span id="kebab-case">text-in-kebab-case-will-appear-here</span>
+      </div>
+      <div class="string-div">
+        <sup>snake-case</sup>
+        <span id="snake-case">text_in_snake_case_will_appear_here</span>
+      </div>
+    </div>
+  </body>
+</html>
