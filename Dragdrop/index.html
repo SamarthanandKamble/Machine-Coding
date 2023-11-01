@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and Drop</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #000;
+        color: #fff;
+      }
+      #dropbox-cnt {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+        width: 300px;
+        margin: 60px auto;
+        justify-content: space-between;
+        align-items: center;
+        border: 2px solid red;
+        background-color: rgba(3, 14, 96, 0.133);
+      }
+      #source-box,
+      #target-box-cnt {
+        height: 20%;
+        width: 100%;
+        border: 2px solid #fff;
+      }
+      #source-text {
+        display: flex;
+        background-color: #e9ee4a;
+        width: 100%;
+        color: #000;
+        border: 2px dotted;
+      }
+      #target-box-cnt {
+        border: 2px solid rgb(37, 210, 60);
+        width: 100%;
+      }
+    </style>
+    <script src="/Dragdrop/script.js" defer></script>
+  </head>
+  <body>
+    <div id="dropbox-cnt">
+      <div id="source-box">
+        <span draggable="true" id="source-text">Here is the text </span>
+      </div>
+      <div id="target-box-cnt">
+        <div id="target-box">Target drop box</div>
+      </div>
+    </div>
+  </body>
+</html>
