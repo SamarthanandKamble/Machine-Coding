@@ -44,13 +44,19 @@
     <script src="/Dragdrop/script.js" defer></script>
   </head>
   <body>
-    <div id="dropbox-cnt">
+    <!-- <div id="dropbox-cnt">
+      <input type="file" name="" id="input-box" />
       <div id="source-box">
         <span draggable="true" id="source-text">Here is the text </span>
       </div>
       <div id="target-box-cnt">
         <div id="target-box">Target drop box</div>
       </div>
-    </div>
+    </div> -->
+    <form id="fileUploadForm" enctype="multipart/form-data">
+      <input type="file" id="fileInput" name="file" />
+      <button type="button" id="uploadButton">Upload File</button>
+    </form>
+    <div id="result"></div>
   </body>
 </html>
