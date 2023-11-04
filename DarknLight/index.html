@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark and Light</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #main-cnt {
+        border: 3px dotted red;
+        height: 100vh;
+        width: 100vw;
+      }
+      #navbar {
+        display: flex;
+        border: 3px dotted rosybrown;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-around;
+        align-items: center;
+        height: 10vh;
+      }
+      #ul-cnt {
+        display: flex;
+        border: 2px solid red;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+      }
+      .list-items {
+        margin: 0px 20px;
+      }
+      #main-div-cnt {
+        height: 80vh;
+        border: 2px solid black;
+      }
+      .main-divs {
+        height: 25%;
+        border: 2px solid yellow;
+        display: flex;
+      }
+      .span-text {
+        width: 90%;
+      }
+    </style>
+    <script src="/DarknLight/script.js" defer></script>
+  </head>
+  <body>
+    <div id="main-cnt">
+      <header id="header">
+        <nav id="navbar">
+          <ul id="ul-cnt">
+            <li class="list-items">Home</li>
+            <li class="list-items">About</li>
+            <li class="list-items">Contact</li>
+          </ul>
+          <div id="mode-toggle">
+            <button type="button" id="mode-toggler-btn">toggler</button>
+          </div>
+        </nav>
+      </header>
+      <main id="main-div-cnt">
+        <div class="main-divs">
+          <span class="span-text">div text</span
+          ><span class="span-toggler"
+            ><button id="span-toggler-btn">Toggle 1</button></span
+          >
+        </div>
+
+        <div class="main-divs">
+          <span class="span-text">div text</span
+          ><span class="span-toggler"
+            ><button id="span-toggler-btn">Toggle 2</button></span
+          >
+        </div>
+
+        <div class="main-divs">
+          <span class="span-text">div text</span
+          ><span class="span-toggler"
+            ><button id="span-toggler-btn">Toggle 3</button></span
+          >
+        </div>
+
+        <div class="main-divs">
+          <span class="span-text">div text</span
+          ><span class="span-toggler"
+            ><button id="span3-toggler-btn">Toggle 4</button></span
+          >
+        </div>
+      </main>
+      <footer id="footer-cnt">
+        <div id="footer-div">
+          <span id="footer-span-text">Copyright</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
