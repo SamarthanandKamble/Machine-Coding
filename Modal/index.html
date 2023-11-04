@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #000;
+        color: #fff;
+      }
+      #heading-text {
+        margin: 20px;
+      }
+      #main-cnt {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+        width: 60vw;
+      }
+      .btn {
+        padding: 10px 30px;
+        background-color: blueviolet;
+        color: #fff;
+        font-family: sans-serif;
+        font-weight: 800;
+        margin: 20px;
+        border: none;
+        cursor: pointer;
+      }
+      #popup-cnt {
+        display: flex;
+        border: 3px solid rgb(255, 255, 255);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        display: none;
+      }
+      #popup-text {
+        text-align: center;
+        margin: 3px;
+      }
+    </style>
+    <script src="/Dialog_popup/script.js" defer></script>
+  </head>
+  <body>
+    <div id="main-cnt">
+      <h1 id="heading-text">A simple open and close dialog</h1>
+      <div id="display-text">
+        Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Ratione sapiente veniam commodi, quos nesciunt aliquam deleniti
+        recusandae provident autem culpa!
+      </div>
+      <button type="button" class="open-btn btn">Open dialog</button>
+      <div id="popup-cnt">
+        <span id="popup-text"
+          >Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Quis optio animi cum officiis atque laudantium
+          tempora inventore libero laboriosam repudiandae dolore nam,
+          repellendus facilis deserunt sit corrupti eius. Quidem quia et unde
+          tempore ullam, illo architecto doloribus error sint est earum suscipit
+          voluptatum ducimus inventore consequatur, animi harum neque
+          laudantium.</span
+        >
+        <div>
+          <button class="close-btn btn">Close dialog</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
