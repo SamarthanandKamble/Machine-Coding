@@ -46,9 +46,16 @@
         height: 25%;
         border: 2px solid yellow;
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
       }
       .span-text {
-        width: 90%;
+        width: 85%;
+      }
+      .toggler-for-div {
+        margin: 10px;
       }
     </style>
     <script src="/DarknLight/script.js" defer></script>
@@ -63,37 +70,66 @@
             <li class="list-items">Contact</li>
           </ul>
           <div id="mode-toggle">
-            <button type="button" id="mode-toggler-btn">toggler</button>
+            <input
+              type="checkbox"
+              name="mode-toggler-btn"
+              id="mode-toggler-btn"
+            />
+            <label for="mode-toggler-btn">toggler</label>
           </div>
         </nav>
       </header>
       <main id="main-div-cnt">
         <div class="main-divs">
-          <span class="span-text">div text</span
-          ><span class="span-toggler"
-            ><button id="span-toggler-btn">Toggle 1</button></span
+          <span class="span-text"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+            veniam laborum hic iste neque ea, recusandae maxime minus inventore
+            aut, ipsum ipsa veritatis ut numquam suscipit minima adipisci
+            asperiores corrupti voluptatem nemo provident? Minus ipsa quas harum
+            temporibus incidunt magnam ex error quidem inventore totam, sit
+            commodi aspernatur, illo ipsam.</span
           >
+          <span>Toggler 1</span>
+          <input type="checkbox" id="1" class="toggler-for-div" />
         </div>
 
         <div class="main-divs">
-          <span class="span-text">div text</span
-          ><span class="span-toggler"
-            ><button id="span-toggler-btn">Toggle 2</button></span
+          <span class="span-text"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+            veniam laborum hic iste neque ea, recusandae maxime minus inventore
+            aut, ipsum ipsa veritatis ut numquam suscipit minima adipisci
+            asperiores corrupti voluptatem nemo provident? Minus ipsa quas harum
+            temporibus incidunt magnam ex error quidem inventore totam, sit
+            commodi aspernatur, illo ipsam.</span
           >
+          <span>Toggler 2</span>
+          <input type="checkbox" id="2" class="toggler-for-div" />
         </div>
 
         <div class="main-divs">
-          <span class="span-text">div text</span
-          ><span class="span-toggler"
-            ><button id="span-toggler-btn">Toggle 3</button></span
+          <span class="span-text"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+            veniam laborum hic iste neque ea, recusandae maxime minus inventore
+            aut, ipsum ipsa veritatis ut numquam suscipit minima adipisci
+            asperiores corrupti voluptatem nemo provident? Minus ipsa quas harum
+            temporibus incidunt magnam ex error quidem inventore totam, sit
+            commodi aspernatur, illo ipsam.</span
           >
+          <span>Toggler 3</span>
+          <input type="checkbox" id="3" class="toggler-for-div" />
         </div>
 
         <div class="main-divs">
-          <span class="span-text">div text</span
-          ><span class="span-toggler"
-            ><button id="span3-toggler-btn">Toggle 4</button></span
+          <span class="span-text"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+            veniam laborum hic iste neque ea, recusandae maxime minus inventore
+            aut, ipsum ipsa veritatis ut numquam suscipit minima adipisci
+            asperiores corrupti voluptatem nemo provident? Minus ipsa quas harum
+            temporibus incidunt magnam ex error quidem inventore totam, sit
+            commodi aspernatur, illo ipsam.</span
           >
+          <span>Toggler 4</span>
+          <input type="checkbox" id="4" class="toggler-for-div" />
         </div>
       </main>
       <footer id="footer-cnt">

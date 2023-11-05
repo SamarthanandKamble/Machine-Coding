@@ -3,21 +3,31 @@ const eachDivBtn = document.querySelector("#main-div-cnt");
 
 const mainDiv = document.querySelector("#main-cnt");
 
-let mainDivToggle = false;
-function toggleMainCnt(e) {
-  if (mainDivToggle) {
-    mainDiv.style.backgroundColor = "#FFFFFF";
-    mainDiv.style.color = "#000";
-    mainDivToggle = false;
-  } else {
+function toggleMainCnt(isChecked) {
+  if (isChecked) {
     mainDiv.style.backgroundColor = "#000";
     mainDiv.style.color = "#FFFFFF";
-    mainDivToggle = true;
+  } else {
+    mainDiv.style.backgroundColor = "#FFFFFF";
+    mainDiv.style.color = "#000";
   }
 }
 
 function selectDivToToggle(e) {
-  console.log(e.target.textContent);
+  let parentNode = e.target.parentNode;
+  let isChecked = e.target.checked;
+  if (isChecked) {
+    parentNode.style.backgroundColor = "#000";
+    parentNode.style.color = "#FFF";
+  } else {
+    parentNode.style.backgroundColor = "#FFF";
+    parentNode.style.color = "#000";
+  }
 }
-modeToggler.addEventListener("click", toggleMainCnt, false);
-eachDivBtn.addEventListener("click", selectDivToToggle);
+modeToggler.addEventListener(
+  "click",
+  (e) => toggleMainCnt(e.target.checked),
+  false
+);
+
+eachDivBtn.addEventListener("click", (e) => selectDivToToggle(e), false);
