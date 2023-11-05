@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skeleton Loader</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f0f0f0;
+      }
+      #main-cnt {
+        height: 50vh;
+        width: 80vw;
+        margin: auto;
+        border: 3px dotted rgb(0, 0, 0);
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: space-around;
+        align-items: stretch;
+        flex-direction: column;
+      }
+      .sub-divs {
+        height: 15%;
+        width: 90%;
+        border: 1px solid green;
+        animation: loader 5s linear infinite;
+        background: linear-gradient(
+          to right,
+          transparent,
+          #e0e0e0,
+          transparent
+        );`
+      }
+
+      @keyframes loader {
+        0% {
+          background-color: #2f2f2f;
+        }
+        100% {
+          background-color: #fd2;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-cnt">
+      <div class="sub-divs"></div>
+      <div class="sub-divs"></div>
+      <div class="sub-divs"></div>
+      <div class="sub-divs"></div>
+    </div>
+  </body>
+</html>
