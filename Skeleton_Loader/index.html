@@ -12,44 +12,83 @@
         /* background-color: #ffffff; */
       }
       #main-cnt {
-        height: 50vh;
-        width: 80vw;
-        margin: auto;
-        /* border: 3px dotted rgb(0, 0, 0); */
+        width: 30%;
+        margin: 20px auto;
+        padding: 10px;
+        box-shadow: 4px 8px 10px 0px #bdb1b1a6;
+      }
+      #image-info-short {
         display: flex;
-        flex-wrap: wrap;
-        align-content: space-around;
-        justify-content: space-around;
-        align-items: stretch;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+      }
+      #user-logo {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        opacity: 0.3;
+      }
+      #user-logo-div {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        animation: skeleton-loader 1s linear infinite alternate;
+      }
+      #user-short-info-text {
+        display: flex;
+        align-content: flex-start;
+        justify-content: center;
+        align-items: flex-start;
         flex-direction: column;
+        flex-wrap: wrap;
+        margin: 5px 9px;
+        animation: skeleton-loader 1s linear infinite alternate;
       }
-      .sub-divs {
-        height: 15%;
+      #user-info {
         width: 90%;
-        /* border: 1px solid green; */
-        animation: loader 2s linear infinite alternate;
-        
       }
-
-      @keyframes loader {
+      #user-email {
+        animation: skeleton-loader 1s linear infinite alternate;
+        margin: 0px 9px;
+      }
+      .user-info-detail {
+        margin: 10px 5px;
+        animation: skeleton-loader 1s linear infinite alternate;
+      }
+      @keyframes skeleton-loader {
         0% {
-          background-color: #d2d2d2;
-        }
-        50% {
-          background-color: rgb(206, 203, 203);
+          background-color: #f0ecec;
         }
         100% {
-          background-color: rgb(123, 121, 121);
+          background-color: #b8b3b3;
         }
       }
+      .skeleton-text {
+        background-color: #e2dede;
+        border-radius: 10px;
+        height: 1rem;
+      }
     </style>
+    <script src="/Skeleton_Loader/script.js" defer></script>
   </head>
   <body>
     <div id="main-cnt">
-      <div class="sub-divs"></div>
-      <div class="sub-divs"></div>
-      <div class="sub-divs"></div>
-      <div class="sub-divs"></div>
+      <div id="image-info-short">
+        <div id="user-logo-div">
+          <img alt="User logo" id="user-logo" />
+        </div>
+        <div id="user-info">
+          <div id="user-short-info-text" class="skeleton-text"></div>
+          <div id="user-email" class="skeleton-text"></div>
+        </div>
+      </div>
+      <div class="user-info-detail skeleton-text"></div>
+      <div class="user-info-detail skeleton-text"></div>
     </div>
   </body>
 </html>
