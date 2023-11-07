@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #010101;
+        color: #ffffff;
+      }
+      #main-cnt {
+        height: 80vh;
+        display: flex;
+        border: 2px dotted yellow;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+      }
+      #input-currency-div {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        border: 2px dotted purple;
+        padding: 5px;
+        width: 50vw;
+        margin: 10px 0px;ssssss
+      }
+      .currency-enter {
+        padding: 5px;
+        margin: 5px;
+        width: 100%;
+      }
+      .currency-option {
+        width: 100%;
+        padding: 5px;
+        text-align: center;
+      }
+      #output-currency-div {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        border: 2px dotted purple;
+        padding: 5px;
+        margin: 10px 0px;
+      }
+      .custom-currency-convert {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+      }
+    </style>
+    <script src="/Currency_Converter/script.js"></script>
+  </head>
+  <body>
+    <h1 id="heading">Currency Converter</h1>
+    <div id="main-cnt">
+      <form>
+        <div id="input-currency-div">
+          <input
+            type="number"
+            name=""
+            id="currency-in"
+            class="currency-enter"
+            required
+            placeholder="Enter amount"
+            maxlength="5"
+          />
+          <select 
+          class="currency-option">
+            <option class="currency-in-options" value="usd">USD</option>
+            <option class="currency-in-options" value="eur">EUR</option>
+            <option class="currency-in-options" value="gbp">GBP</option>
+            <option class="currency-in-options" value="inr">INR</option>
+          </select>
+        </div>
+        <div id="output-currency-div">
+          <input
+            type="text"
+            name=""
+            id="currency-in"
+            disabled
+            placeholder="Result"
+            class="currency-enter"
+          />
+          <select class="currency-option">
+            <option class="currency-out-options" value="usd">USD</option>
+            <option class="currency-out-options" value="eur">EUR</option>
+            <option class="currency-out-options" value="gbp">GBP</option>
+            <option class="currency-out-options" value="inr">INR</option>
+            <option class="currency-out-options" value="custom">Custom</option>
+          </select>
+        </div>
+        <div class="custom-currency-convert">
+          <button type="submit">Convert</button>
+        </div>
+        <div class="custom-currency-convert">
+          <input
+            type="text"
+            id="custom-convert"
+            placeholder="Custom currency (eg. CAI)"
+          />
+        </div>
+        <div class="custom-currency-convert">
+          <button type="submit">Add Currency</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
