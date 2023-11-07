@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drum Board</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f2f2f2;
+        font-family: "Roboto";
+      }
+      #drum-board-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 40vh;
+        width: 60vw;
+        margin: auto;
+      }
+      .drum-keys {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30%;
+        width: 20%;
+        margin: 5px;
+        text-align: center;
+        background-color: #ffffff;
+        box-shadow: 0px 4px 10px 0px #2d2d2d;
+      }
+      #heading {
+        text-align: center;
+        font-weight: 700;
+      }
+    </style>
+    <script src="/Drum_Board/script.js" defer></script>
+  </head>
+  <body>
+    <h1 id="heading">Press the keys or click on it.</h1>
+    <div id="drum-board-wrapper">
+      <div class="drum-keys">w</div>
+      <div class="drum-keys">a</div>
+      <div class="drum-keys">s</div>
+      <div class="drum-keys">d</div>
+      <div class="drum-keys">f</div>
+    </div>
+  </body>
+</html>
