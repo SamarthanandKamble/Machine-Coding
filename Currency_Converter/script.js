@@ -21,10 +21,7 @@ function currencyConvert(currencyCount, fromCurrency) {
   let result =
     (currencyCount / currencyValue.get(fromCurrency)) *
     currencyValue.get(toCurrency.value);
-
   displayCurrency.value = result.toFixed(2);
-  console.log(`from : ${fromCurrency}`);
-  console.log(`to : ${toCurrency.value}`);
 }
 
 function addCustomCurrency(value) {
@@ -35,10 +32,8 @@ function addCustomCurrency(value) {
     if (!isNaN(newCurrencyValue)) {
       currencyValue.set(newCurrency, newCurrencyValue);
 
-      const lastChildOFFromCurrency = fromCurrency.lastElementChild;
-      console.log(`last from ${lastChildOFFromCurrency}`);
       const lastChildOFToCurrency = toCurrency.lastElementChild;
-      console.log(`last to ${lastChildOFToCurrency}`);
+
       const optionDivTo = document.createElement("option");
       optionDivTo.value = newCurrency;
       optionDivTo.textContent = newCurrency;
