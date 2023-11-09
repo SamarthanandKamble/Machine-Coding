@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #main-cnt {
+        height: 60vh;
+        width: 50vw;
+        margin: auto;
+      }
+      #accordion-main-div {
+        border: 2px solid black;
+        margin: 5px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .accordion-div {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+      .accordion-text {
+        display: none;
+        border: 2px dotted purple;
+        width: 100%;
+        text-align: center;
+      }
+
+    </style>
+    <script src="/Accordion/script.js" defer></script>
+  </head>
+  <body>
+    <div id="main-cnt">
+      <div id="multiple-open-div">
+        <span id="multiple-open-allow-toggler"
+          >Is multiple open accordion allowed?</span
+        >
+        <input type="checkbox" name="" id="multiple-open-toggler" />
+      </div>
+      <div id="accordion-main-div">
+        <div class="accordion-div" id="1" data-id="1">
+          <div class="accordion-heading">Accordion 1</div>
+          <div class="accordion-logo">Accordion logo</div>
+          <span class="accordion-text">test text 1</span>
+        </div>
+        <div class="accordion-div" id="2" data-id="2">
+          <div class="accordion-heading">Accordion 2</div>
+          <div class="accordion-logo">Accordion logo</div>
+          <span class="accordion-text">test text 2</span>
+        </div>
+        <div class="accordion-div" id="3" data-id="3">
+          <div class="accordion-heading">Accordion 3</div>
+          <div class="accordion-logo">Accordion logo</div>
+          <span class="accordion-text">test text 3</span>
+        </div>
+        <div class="accordion-div" id="4" data-id="4">
+          <div class="accordion-heading">Accordion 4</div>
+          <div class="accordion-logo">Accordion logo</div>
+          <span class="accordion-text">test text 4</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
