@@ -1,9 +1,6 @@
 const multipleOpenToggler = document.querySelector("#multiple-open-toggler");
 const accordionMainDiv = document.querySelector("#accordion-main-div");
 const accordionText = document.querySelectorAll(".accordion-text");
-let isAccordionOpen = false;
-let isDivOpen = false;
-let previousAccordion = "";
 let presentAccordion;
 
 function checkMultipleOpenAllowed() {
@@ -15,14 +12,11 @@ function checkMultipleOpenAllowed() {
 }
 
 function openAccordion(div) {
-  div.classList.add("accordion-text-active");
-  div.classList.remove("accordion-text");
-  isDivOpen = false;
+  div.classList.toggle("accordion-text-active");
 }
 function closeAccordion(div) {
   div.classList.remove("accordion-text-active");
   div.classList.add("accordion-text");
-  isDivOpen = true;
 }
 
 function multipleAccordionDiv(e) {
@@ -100,15 +94,11 @@ function simpleAccordion(e) {
       }
     });
   }
-  console.log("previousAccordion : ", previousAccordion);
-  console.log("presentAccordion :", presentAccordion);
-  previousAccordion = presentAccordion;
 }
 
 function check(e) {
   if (checkMultipleOpenAllowed()) {
     multipleAccordionDiv(e);
-    // close all open accordions.
   } else {
     simpleAccordion(e);
   }
