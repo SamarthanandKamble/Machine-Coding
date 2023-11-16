@@ -1,6 +1,7 @@
 const multipleOpenToggler = document.querySelector("#multiple-open-toggler");
 const accordionMainDiv = document.querySelector("#accordion-main-div");
 const accordionText = document.querySelectorAll(".accordion-text");
+const accordionLogo = document.querySelectorAll(".accordion-logo");
 let presentAccordion;
 
 function checkMultipleOpenAllowed() {
@@ -11,12 +12,22 @@ function checkMultipleOpenAllowed() {
   }
 }
 
-function openAccordion(div) {
+function openAccordion(div, accordionPanel) {
   div.classList.toggle("accordion-text-active");
+  if (
+    accordionPanel?.classList.contains("fa-caret-down") ||
+    div === accordionPanel
+  ) {
+    accordionPanel.classList.replace("fa-caret-down", "fa-caret-up");
+  } else {
+    accordionPanel?.classList.replace("fa-caret-up", "fa-caret-down");
+  }
+  console.log("div : ", div, "accordion : ", accordionPanel);
 }
-function closeAccordion(div) {
+function closeAccordion(div, accordionPanel) {
   div.classList.remove("accordion-text-active");
   div.classList.add("accordion-text");
+  div.previousElementSibling.classList.replace("fa-caret-up", "fa-caret-down");
 }
 
 function multipleAccordionDiv(e) {
@@ -24,7 +35,10 @@ function multipleAccordionDiv(e) {
   if (
     presentAccordion?.lastElementChild?.classList?.contains("accordion-text")
   ) {
-    openAccordion(presentAccordion?.lastElementChild);
+    openAccordion(
+      presentAccordion?.lastElementChild,
+      presentAccordion?.lastElementChild?.previousElementSibling
+    );
   } else if (
     presentAccordion?.lastElementChild?.classList?.contains(
       "accordion-text-active"
@@ -36,7 +50,10 @@ function multipleAccordionDiv(e) {
       "accordion-text"
     )
   ) {
-    openAccordion(presentAccordion?.nextElementSibling?.nextElementSibling);
+    openAccordion(
+      presentAccordion?.nextElementSibling?.nextElementSibling,
+      presentAccordion?.nextElementSibling
+    );
   } else if (
     presentAccordion?.nextElementSibling?.nextElementSibling?.classList?.contains(
       "accordion-text-active"
@@ -46,7 +63,7 @@ function multipleAccordionDiv(e) {
   } else if (
     presentAccordion?.nextElementSibling?.classList?.contains("accordion-text")
   ) {
-    openAccordion(presentAccordion?.nextElementSibling);
+    openAccordion(presentAccordion?.nextElementSibling, presentAccordion);
   } else if (
     presentAccordion?.nextElementSibling?.classList?.contains(
       "accordion-text-active"
@@ -66,7 +83,10 @@ function simpleAccordion(e) {
   ) {
     Array.from(accordionText).map((item) => {
       if (item === presentAccordion?.lastElementChild) {
-        openAccordion(item);
+        openAccordion(
+          item,
+          presentAccordion.lastElementChild.previousElementSibling
+        );
       } else {
         closeAccordion(item);
       }
@@ -78,7 +98,7 @@ function simpleAccordion(e) {
   ) {
     Array.from(accordionText).map((item) => {
       if (item === presentAccordion?.nextElementSibling?.nextElementSibling) {
-        openAccordion(item);
+        openAccordion(item, presentAccordion?.nextElementSibling);
       } else {
         closeAccordion(item);
       }
@@ -88,9 +108,9 @@ function simpleAccordion(e) {
   ) {
     Array.from(accordionText).map((item) => {
       if (item === presentAccordion?.nextElementSibling) {
-        openAccordion(item);
+        openAccordion(item, presentAccordion);
       } else {
-        closeAccordion(item);
+        closeAccordion(item, item);
       }
     });
   }

@@ -4,19 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
       }
       #main-cnt {
         height: 60vh;
         width: 50vw;
-        margin: auto;
+        margin: 30px auto;
+      }
+      #multiple-open-div {
+        padding: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        margin: 5px;
       }
       #accordion-main-div {
-        border: 2px solid black;
+        width: 100%;
         margin: 5px;
         display: flex;
         flex-direction: row;
@@ -32,47 +57,85 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        padding: 15px 20px;
+        background-color: #f5f5f5;
+        margin: 2px;
+        cursor: pointer;
       }
       .accordion-text {
         display: none;
       }
       .accordion-text-active {
         display: block;
-        border: 2px dotted purple;
         width: 100%;
         text-align: center;
+        padding: 5px;
+        margin: 10px;
+        font-weight: 400;
+        cursor: default;
       }
     </style>
+
     <script src="script.js" defer></script>
   </head>
   <body>
     <div id="main-cnt">
       <div id="multiple-open-div">
         <span id="multiple-open-allow-toggler"
-          >Is multiple open accordion allowed?</span
+          >Is multiple open accordion allowed ?</span
         >
         <input type="checkbox" name="" id="multiple-open-toggler" />
       </div>
       <div id="accordion-main-div">
         <div class="accordion-div" id="1" data-id="1">
-          <div class="accordion-heading">Accordion 1</div>
-          <div class="accordion-logo">Accordion logo</div>
-          <span class="accordion-text">test text 1</span>
+          <div class="accordion-heading">Sample 1</div>
+
+          <i class="fa-solid fa-caret-down accordion-logo" id="1"></i>
+
+          <span class="accordion-text"
+            >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum
+            unde veritatis consequuntur ratione quibusdam sint ducimus quo, ad
+            porro sed. Quam accusamus atque, iusto cupiditate veritatis laborum
+            harum quia aperiam deserunt corporis voluptates quis, praesentium
+            facere quod, maiores nulla minus perferendis. Asperiores illo
+            voluptate ipsa commodi pariatur, illum tempore hic!</span
+          >
         </div>
         <div class="accordion-div" id="2" data-id="2">
-          <div class="accordion-heading">Accordion 2</div>
-          <div class="accordion-logo">Accordion logo</div>
-          <span class="accordion-text">test text 2</span>
+          <div class="accordion-heading">Sample 2</div>
+          <i class="fa-solid fa-caret-down accordion-logo" id="2"></i>
+          <span class="accordion-text"
+            >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum
+            unde veritatis consequuntur ratione quibusdam sint ducimus quo, ad
+            porro sed. Quam accusamus atque, iusto cupiditate veritatis laborum
+            harum quia aperiam deserunt corporis voluptates quis, praesentium
+            facere quod, maiores nulla minus perferendis. Asperiores illo
+            voluptate ipsa commodi pariatur, illum tempore hic!</span
+          >
         </div>
         <div class="accordion-div" id="3" data-id="3">
-          <div class="accordion-heading">Accordion 3</div>
-          <div class="accordion-logo">Accordion logo</div>
-          <span class="accordion-text">test text 3</span>
+          <div class="accordion-heading">Sample 3</div>
+          <i class="fa-solid fa-caret-down accordion-logo" id="3"></i>
+          <span class="accordion-text"
+            >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum
+            unde veritatis consequuntur ratione quibusdam sint ducimus quo, ad
+            porro sed. Quam accusamus atque, iusto cupiditate veritatis laborum
+            harum quia aperiam deserunt corporis voluptates quis, praesentium
+            facere quod, maiores nulla minus perferendis. Asperiores illo
+            voluptate ipsa commodi pariatur, illum tempore hic!</span
+          >
         </div>
         <div class="accordion-div" id="4" data-id="4">
-          <div class="accordion-heading">Accordion 4</div>
-          <div class="accordion-logo">Accordion logo</div>
-          <span class="accordion-text">test text 4</span>
+          <div class="accordion-heading">Sample 4</div>
+          <i class="fa-solid fa-caret-down accordion-logo" id="4"></i>
+          <span class="accordion-text"
+            >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum
+            unde veritatis consequuntur ratione quibusdam sint ducimus quo, ad
+            porro sed. Quam accusamus atque, iusto cupiditate veritatis laborum
+            harum quia aperiam deserunt corporis voluptates quis, praesentium
+            facere quod, maiores nulla minus perferendis. Asperiores illo
+            voluptate ipsa commodi pariatur, illum tempore hic!</span
+          >
         </div>
       </div>
     </div>
