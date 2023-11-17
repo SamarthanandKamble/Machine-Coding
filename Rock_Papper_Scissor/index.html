@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f2f2f2;
+      }
+      h1 {
+        text-align: center;
+      }
+      #result-heading {
+        padding: 5px;
+        text-align: center;
+      }
+      #ul-cnt {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-around;
+        align-items: center;
+        height: 60vh;
+      }
+      .li-items {
+        display: flex;
+        border: 1px solid;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      #vs-text {
+        text-align: center;
+      }
+      #vs-text span {
+        font-size: xx-large;
+      }
+      #cmp-val {
+        text-align: center;
+      }
+    </style>
+    <script src="/Rock_Papper_Scissor/script.js" defer></script>
+  </head>
+  <body>
+    <h1>Rock paper scissor</h1>
+    <ul id="ul-cnt">
+      <li class="li-items" value="Rock">
+        <i class="fa-regular fa-hand-back-fist fa-5x"></i>
+      </li>
+      <li class="li-items" value="Paper">
+        <i class="fa-regular fa-hand fa-5x"></i>
+      </li>
+      <li class="li-items" value="Scissor">
+        <i class="fa-regular fa-hand-scissors fa-5x"></i>
+      </li>
+    </ul>
+    <div id="vs-text"><span> VS </span></div>
+    <div id="cmp-val">
+      <span>Computer value </span>
+    </div>
+    <div id="result-div">
+      <h2 id="result-heading"></h2>
+    </div>
+  </body>
+</html>
