@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #pie-chart {
+        height: 200px;
+        width: 200px;
+        border: 1px solid red;
+        border-radius: 50%;
+        background: conic-gradient(red var(--percent), white 0);
+      }
+      h1,
+      #input-div {
+        text-align: center;
+      }
+      #input-range{
+        width: 20%;
+      }
+      #pie-chart {
+        margin: auto;
+      }
+    </style>
+    <script src="/PieChart/script.js" defer></script>
+  </head>
+  <body>
+    <h1>Pie chart generator</h1>
+    <div id="input-div">
+      <input type="range" name="" id="input-range" value="10" />
+    </div>
+    <div id="pie-chart" style="--percent: 10%"></div>
+  </body>
+</html>
