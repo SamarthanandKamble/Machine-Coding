@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #main-cnt {
+        display: flex;
+        border: 1px solid;
+        width: 80vw;
+        margin: auto;
+      }
+      #input-div {
+        display: flex;
+        border: 1px solid red;
+        flex-direction: column;
+        width: 50%;
+        margin: 2px;
+      }
+      #amount-cnt {
+        border: 1px solid #000;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      #bill-money {
+        border: 1px solid red;
+        background-color: transparent;
+        outline: none;
+        width: 90%;
+      }
+      #tip-amt-div {
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid red;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        margin: 0px auto;
+      }
+      .tip-amt {
+        padding: 15px;
+        margin: 10px;
+        display: flex;
+        background-color: #d2d2d2;
+        cursor: pointer;
+      }
+      #output-div {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid lime;
+        width: 50%;
+        margin: 2px;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding: 10px;
+        background-color: rgb(213, 50, 213);
+      }
+      .input-box {
+        padding: 5px;
+        margin: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-cnt">
+      <div id="input-div">
+        <label for="bill-money">Bill</label>
+        <div id="amount-cnt">
+          <span>$</span
+          ><input type="number" id="bill-money" class="input-box" />
+        </div>
+        <span> Select Tip</span>
+        <div id="tip-amt-div">
+          <span class="tip-amt">05%</span><span class="tip-amt">10%</span
+          ><span class="tip-amt">15%</span><span class="tip-amt">25%</span
+          ><span class="tip-amt">50%</span><span class="tip-amt">75%</span>
+        </div>
+        <input
+          type="text"
+          name=""
+          id="custom-tip"
+          placeholder="custom tip"
+          class="input-box"
+        />
+        <span>Number of People</span>
+        <input
+          type="text"
+          name=""
+          id="people-count"
+          placeholder="No of People"
+          class="input-box"
+        />
+        <button type="button" id="generate-bill">Generate bill</button>
+      </div>
+      <div id="output-div">
+        <div>Tip Amount :</div>
+        <div>Total :</div>
+        <div>Each Person Bill :</div>
+        <button type="button" id="reset-btn">Reset</button>
+      </div>
+    </div>
+  </body>
+</html>
