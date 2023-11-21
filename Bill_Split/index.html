@@ -3,12 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Bill Split</title>
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        border: none;
       }
       #main-cnt {
         display: flex;
@@ -33,12 +39,12 @@
         justify-content: space-evenly;
       }
       #bill-money {
-        border: 1px solid red;
         background-color: transparent;
         outline: none;
         width: 90%;
+        border: none;
       }
-      #tip-amt-div {
+      .tip-amt-div {
         display: flex;
         flex-wrap: wrap;
         border: 1px solid red;
@@ -72,6 +78,7 @@
         margin: 2px;
       }
     </style>
+    <script src="/Bill_Split/script.js" defer></script>
   </head>
   <body>
     <div id="main-cnt">
@@ -82,13 +89,16 @@
           ><input type="number" id="bill-money" class="input-box" />
         </div>
         <span> Select Tip</span>
-        <div id="tip-amt-div">
-          <span class="tip-amt">05%</span><span class="tip-amt">10%</span
-          ><span class="tip-amt">15%</span><span class="tip-amt">25%</span
-          ><span class="tip-amt">50%</span><span class="tip-amt">75%</span>
+        <div class="tip-amt-div">
+          <span class="tip-amt" id="1">05 %</span
+          ><span class="tip-amt" id="2">10 %</span
+          ><span class="tip-amt" id="3">15 %</span
+          ><span class="tip-amt" id="4">25 %</span
+          ><span class="tip-amt" id="5">50 %</span
+          ><span class="tip-amt" id="6">75 %</span>
         </div>
         <input
-          type="text"
+          type="number"
           name=""
           id="custom-tip"
           placeholder="custom tip"
@@ -96,18 +106,18 @@
         />
         <span>Number of People</span>
         <input
-          type="text"
+          type="number"
           name=""
           id="people-count"
           placeholder="No of People"
           class="input-box"
         />
-        <button type="button" id="generate-bill">Generate bill</button>
+        <button type="button" id="generate-bill" disabled>Generate bill</button>
       </div>
       <div id="output-div">
-        <div>Tip Amount :</div>
-        <div>Total :</div>
-        <div>Each Person Bill :</div>
+        <div id="tip-amt">Tip Amount :</div>
+        <div id="total-bill">Total :</div>
+        <div id="split-bill">Each Person Bill :</div>
         <button type="button" id="reset-btn">Reset</button>
       </div>
     </div>
