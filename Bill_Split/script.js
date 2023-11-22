@@ -11,11 +11,13 @@ let resetBtn = document.querySelector("#reset-btn");
 let tipAmountValue;
 
 function generateBill() {
-  let amount = Math.trunc(billAmount.value);
-  let tipAmount = calculateTipAmount(amount);
-  let sumAmount = tipAmount + amount;
-  billForEachPerson(sumAmount);
-  totalBill.textContent = `Total : ${sumAmount}`;
+  if (billAmount.value > 0) {
+    let amount = Math.trunc(billAmount.value);
+    let tipAmount = calculateTipAmount(amount);
+    let sumAmount = tipAmount + amount;
+    billForEachPerson(sumAmount);
+    totalBill.textContent = `Total : ${sumAmount}`;
+  }
 }
 
 function billForEachPerson(totalAmount) {
@@ -40,9 +42,9 @@ function reset() {
   billAmount.value = "";
   customTip.value = "";
   people.value = "";
-  totalBill.textContent = "";
-  splitBill.textContent = "";
-  tipAmount.textContent = "";
+  totalBill.textContent = "Total :";
+  splitBill.textContent = "Each Person Bill :";
+  tipAmount.textContent = "Tip Amount :";
 }
 
 generateBillBtn.addEventListener("click", generateBill);
@@ -56,7 +58,7 @@ selectTip.addEventListener("click", (e) => {
 resetBtn.addEventListener("click", reset);
 
 billAmount.addEventListener("input", () => {
-  if (billAmount.value > 0) {
+  if (billAmount.value > 0 && billAmount.value !== "") {
     generateBillBtn.removeAttribute("disabled");
   }
 });

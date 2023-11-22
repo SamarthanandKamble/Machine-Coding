@@ -4,11 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bill Split</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@600&display=swap"
+      rel="stylesheet"
+    />
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: "Roboto Condensed", sans-serif;
       }
       input::-webkit-outer-spin-button,
       input::-webkit-inner-spin-button {
@@ -18,25 +25,23 @@
       }
       #main-cnt {
         display: flex;
-        border: 1px solid;
-        width: 80vw;
+        width: 50vw;
         margin: auto;
       }
       #input-div {
         display: flex;
-        border: 1px solid red;
         flex-direction: column;
         width: 50%;
         margin: 2px;
       }
       #amount-cnt {
-        border: 1px solid #000;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-content: center;
         align-items: center;
         justify-content: space-evenly;
+        border: 1px solid #000;
       }
       #bill-money {
         background-color: transparent;
@@ -47,7 +52,6 @@
       .tip-amt-div {
         display: flex;
         flex-wrap: wrap;
-        border: 1px solid red;
         justify-content: space-between;
         align-content: center;
         align-items: center;
@@ -63,7 +67,6 @@
       #output-div {
         display: flex;
         flex-direction: column;
-        border: 1px solid lime;
         width: 50%;
         margin: 2px;
         flex-wrap: wrap;
@@ -77,6 +80,18 @@
         padding: 5px;
         margin: 2px;
       }
+      #reset-btn {
+        width: 100%;
+        height: 4vh;
+        text-align: center;
+        cursor: pointer;
+      }
+      #generate-bill{
+        padding: 5px;
+        font-size: large;
+        border: none;
+        cursor: pointer;
+      }
     </style>
     <script src="/Bill_Split/script.js" defer></script>
   </head>
@@ -85,7 +100,7 @@
       <div id="input-div">
         <label for="bill-money">Bill</label>
         <div id="amount-cnt">
-          <span>$</span
+          <span>₹</span
           ><input type="number" id="bill-money" class="input-box" />
         </div>
         <span> Select Tip</span>
