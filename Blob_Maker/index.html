@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blob Maker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        background-color: #fcfcfc;
+        font-family: "Noto Sans", sans-serif;
+      }
+      #main-obj-outer-div {
+        width: 30%;
+        margin: 20px auto;
+        padding: 10px;
+      }
+      .main-obj {
+        height: 200px;
+        width: 200px;
+        margin: 10px auto;
+        background-color: #a917e3;
+        border-radius: 50%;
+        box-shadow: 9px 9px 14px 6px #a9a9a9;
+      }
+      .main-obj-properties {
+        text-align: center;
+      }
+
+      .input-cnt {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 25vw;
+        margin: auto;
+        padding: 20px;
+      }
+      .heading {
+        text-align: center;
+        font-weight: 600;
+      }
+    </style>
+    <script src="/Blob_Maker/script.js" defer></script>
+  </head>
+  <body>
+    <div id="main-cnt">
+      <div><h1 class="heading">Blob Maker</h1></div>
+      <div id="main-obj-outer-div"><div class="main-obj"></div></div>
+      <div class="main-obj-properties">
+        <span class="height"
+          >Height <input class="height-value" value="100"
+        /></span>
+        <span class="width">
+          Width <input class="width-value" value="100" />
+        </span>
+      </div>
+      <div class="input-cnt">
+        <input type="range" name="" id="top-left" value="30" />
+        <input type="range" name="" id="top-right" value="80" />
+        <input type="range" name="" id="bottom-left" value="60" /><input
+          type="range"
+          name=""
+          id="bottom-right"
+          value="40"
+        />
+      </div>
+    </div>
+  </body>
+</html>
