@@ -32,6 +32,13 @@
         text-align: center;
       }
 
+      .height-value,
+      .width-value {
+        outline: none;
+        border: 1px solid #000000;
+        padding: 5px;
+      }
+
       .input-cnt {
         display: flex;
         flex-wrap: wrap;
@@ -45,6 +52,30 @@
         text-align: center;
         font-weight: 600;
       }
+      .border-radius-prop-div {
+        border: 1px solid #000000;
+        width: 35%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      #border-radius-prop {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        padding: 10px;
+        font-weight: 600;
+        width: 70%;
+        text-align: center;
+      }
+      #border-radius-prop-label {
+        width: 20%;
+        cursor: pointer;
+      }
     </style>
     <script src="/Blob_Maker/script.js" defer></script>
   </head>
@@ -54,10 +85,10 @@
       <div id="main-obj-outer-div"><div class="main-obj"></div></div>
       <div class="main-obj-properties">
         <span class="height"
-          >Height <input class="height-value" value="100"
+          >Height <input class="height-value" value="200"
         /></span>
         <span class="width">
-          Width <input class="width-value" value="100" />
+          Width <input class="width-value" value="200" />
         </span>
       </div>
       <div class="input-cnt">
@@ -69,6 +100,12 @@
           id="bottom-right"
           value="40"
         />
+      </div>
+      <div class="border-radius-prop-div">
+        <input type="text" disabled id="border-radius-prop" />
+        <label for="border-radius-prop" id="border-radius-prop-label"
+          >Copy</label
+        >
       </div>
     </div>
   </body>

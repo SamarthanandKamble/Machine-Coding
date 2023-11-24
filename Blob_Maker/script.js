@@ -6,11 +6,14 @@ let inputCnt = document.querySelector(".input-cnt");
 let mainObj = document.querySelector(".main-obj");
 let height = document.querySelector(".height-value");
 let width = document.querySelector(".width-value");
+let borderRadiusProp = document.querySelector("#border-radius-prop");
+let borderRadiusPropLabel = document.querySelector("#border-radius-prop-label");
 
 function setProperty(x1, x2, y1, y2) {
   mainObj.style.borderRadius = `${x1}% ${100 - x1}% ${
     100 - y1
   }% ${y1}% / ${y2}% ${x2}% ${100 - x2}% ${100 - y2}%`;
+  borderRadiusProp.value = mainObj.style.borderRadius;
 }
 
 inputCnt.addEventListener("input", (e) => {
@@ -36,9 +39,21 @@ inputCnt.addEventListener("input", (e) => {
   }
 });
 
+function displayRadiusProperties() {
+  if (mainObj.style.borderRadius) {
+    borderRadiusProp.select();
+    navigator.clipboard.writeText(borderRadiusProp.value);
+    alert("Copied the border-radius value");
+  } else {
+    alert("The border-radius is 50%, copied!");
+  }
+}
+
 height.addEventListener("change", (e) => {
   mainObj.style.height = e.target.value + "px";
 });
 width.addEventListener("change", (e) => {
   mainObj.style.width = e.target.value + "px";
 });
+
+borderRadiusPropLabel.addEventListener("click", displayRadiusProperties);
