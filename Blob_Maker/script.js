@@ -45,7 +45,7 @@ function displayRadiusProperties() {
     navigator.clipboard.writeText(borderRadiusProp.value);
     alert("Copied the border-radius value");
   } else {
-    alert("The border-radius is 50%, copied!");
+    alert("The border-radius is 50%");
   }
 }
 
