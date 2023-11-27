@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finance Track</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Lato", sans-serif;
+      }
+      header {
+        width: 100%;
+        text-align: center;
+      }
+      .main-cnt {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 5px;
+        width: 50vw;
+        margin: 4rem auto;
+      }
+
+      .dropdown {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border: 1px solid #000;
+      }
+      .input-box {
+        padding: 5px 10px;
+        margin: 5px 2px;
+      }
+      #dropdown-value {
+        width: 40%;
+        padding: 5px;
+        margin: 2px 5px;
+      }
+      #dropdown-btn {
+        width: 50%;
+        text-align: end;
+        padding: 0px 10px;
+      }
+      .ul-cnt {
+        display: none;
+        width: 100%;
+        list-style: none;
+        padding: 5px;
+        margin: 2px 5px;
+      }
+      .list-items,
+      .display-tans {
+        width: 100%;
+      }
+      .trns-display-items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+      }
+      #add-trns {
+        padding: 5px;
+        margin: 5px 0px;
+        background-color: #D4e157;
+        border-radius: 5px;
+        border: 1px solid #D4e157;
+      cursor: pointer;
+      }
+    </style>
+    <script src="/Finance_Track/script.js" defer></script>
+  </head>
+  <body>
+    <div class="main-cnt">
+      <header>
+        <h1>Your balance is : ₹<span id="main-amount">0</span></h1>
+      </header>
+      <div><h2>Add Transaction</h2></div>
+      <label for="description">Description </label>
+      <input
+        type="text"
+        name=""
+        id="description"
+        class="input-box"
+        placeholder="Enter description"
+      />
+      <label for="amount"> Amount</label>
+      <input
+        type="number"
+        name=""
+        id="amount"
+        class="input-box"
+        placeholder="Enter amount"
+      />
+      <div class="dropdown">
+        <div id="dropdown-value">Income</div>
+        <div id="dropdown-btn"><i class="fa-solid fa-angle-down"></i></div>
+        <ul class="ul-cnt">
+          <li class="list-items">Income</li>
+          <hr />
+          <li class="list-items">Expense</li>
+        </ul>
+      </div>
+      <button id="add-trns">Add transaction</button>
+      <div class="display-tans"></div>
+    </div>
+  </body>
+</html>
