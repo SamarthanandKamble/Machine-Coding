@@ -22,7 +22,7 @@
       .meme-img-div {
         height: 40vh;
         width: 40vh;
-        border: 1px solid #000;
+        border: 1px solid #f2f2f2;
         margin: 2rem auto;
       }
       .meme-img {
@@ -53,7 +53,31 @@
         border: 5px solid #e2ff00;
         color: #000000;
         border-radius: 5px;
-    }
+      }
+      .loading {
+        background-color: #f2f2f2;
+        animation: skeleton-loader 1s infinite
+          cubic-bezier(0.45, 0.05, 0.55, 0.95) alternate;
+        display: none;
+      }
+      .loading-text {
+        display: flex;
+        background-color: #f2f2f2;
+        animation: skeleton-loader 1s infinite
+          cubic-bezier(0.45, 0.05, 0.55, 0.95) alternate;
+        padding: 5px;
+        border-radius: 3px;
+        width: 60%;
+        display: none;
+      }
+      @keyframes skeleton-loader {
+        0% {
+          background-color: #a5a3a3;
+        }
+        100% {
+          background-color: #f2f2f2;
+        }
+      }
     </style>
     <script src="/Meme_Generator/script.js" defer></script>
   </head>
@@ -61,18 +85,30 @@
     <div id="main-cnt">
       <div class="meme-img-div">
         <img
-          src="https://i.redd.it/lbsm4vgyeg2c1.png"
+          src="https://i.redd.it/ipw74c8dz03c1.jpg"
           alt="meme-img"
           class="meme-img"
         />
       </div>
+      <div class="meme-img-div loading">
+        <img alt="meme-img" class="meme-img loading" />
+      </div>
       <div class="meme-info">
         <span class="meme-title"
-          >Title : <span class="title-info">Mike is so awesome</span></span
+          >Title : <span class="title-info">Smooth criminal</span></span
         >
         <span class="meme-author"
           >Meme author :
-          <span class="author-info">InvestigatorNo1681</span>
+          <span class="author-info">Visible-Cantaloupe72</span>
+        </span>
+      </div>
+
+      <div class="meme-info">
+        <span class="meme-title loading-text">
+          <span class="title-info loading-text"> </span>
+        </span>
+        <span class="meme-author loading-text">
+          <span class="author-info loading-text"> </span>
         </span>
       </div>
       <div class="generate-meme-btn-div">
