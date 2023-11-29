@@ -24,21 +24,36 @@
         width: 40vh;
         border: 1px solid #f2f2f2;
         margin: 2rem auto;
+        position: relative;
+        border-radius: 3px;
       }
       .meme-img {
         height: 100%;
         width: 100%;
+        border-radius: 3px;
+      }
+      .img-loading {
+        height: 40vh;
+        width: 40vh;
+        border: 1px solid #f2f2f2;
+        margin: 2rem auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        border-radius: 4px;
+        display: none;
       }
       .meme-info {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
         align-content: center;
         justify-content: space-evenly;
         align-items: flex-start;
         height: 10vh;
         width: 50vw;
         margin: auto;
+        position: relative;
       }
       .generate-meme-btn-div {
         width: 100%;
@@ -56,20 +71,31 @@
       }
       .loading {
         background-color: #f2f2f2;
-        animation: skeleton-loader 1s infinite
+        animation: skeleton-loader 0.5s infinite
           cubic-bezier(0.45, 0.05, 0.55, 0.95) alternate;
         display: none;
       }
       .loading-text {
-        display: flex;
-        background-color: #f2f2f2;
+        background-color: #fff;
+        width: 60%;
+        height: 1rem;
+        position: absolute;
+        margin-bottom: 4rem;
         animation: skeleton-loader 1s infinite
           cubic-bezier(0.45, 0.05, 0.55, 0.95) alternate;
-        padding: 5px;
-        border-radius: 3px;
-        width: 60%;
+        left: 0;
+        top: 15%;
+        border-radius: 5px;
         display: none;
       }
+
+      .loading-text:last-child {
+        margin-bottom: 0rem;
+        top: 56.5%;
+        left: 0;
+        width: 90%;
+      }
+
       @keyframes skeleton-loader {
         0% {
           background-color: #a5a3a3;
@@ -89,28 +115,21 @@
           alt="meme-img"
           class="meme-img"
         />
-      </div>
-      <div class="meme-img-div loading">
-        <img alt="meme-img" class="meme-img loading" />
-      </div>
-      <div class="meme-info">
-        <span class="meme-title"
-          >Title : <span class="title-info">Smooth criminal</span></span
-        >
-        <span class="meme-author"
-          >Meme author :
-          <span class="author-info">Visible-Cantaloupe72</span>
-        </span>
+        <img alt="meme-img" class="img-loading loading" />
       </div>
 
       <div class="meme-info">
-        <span class="meme-title loading-text">
-          <span class="title-info loading-text"> </span>
+        <span class="meme-title"
+          >Title - <span class="title-info">Smooth criminal</span></span
+        >
+        <span class="meme-author"
+          >Meme author -
+          <span class="author-info">Visible-Cantaloupe72</span>
         </span>
-        <span class="meme-author loading-text">
-          <span class="author-info loading-text"> </span>
-        </span>
+        <span class="loading-text"></span>
+        <span class="loading-text"></span>
       </div>
+
       <div class="generate-meme-btn-div">
         <button type="submit" class="generate-meme-btn">Generate Meme</button>
       </div>
