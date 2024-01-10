@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee DB</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <section class="header">
+        <span class="header-text">Employee Database Management</span>
+        <button class="add-employee-btn">Add Employee</button>
+      </section>
+      <section class="body">
+        <div class="employee-list-cnt">
+          <span class="employee-list-cnt-header">Employee List</span>
+          <ul class="employee-list">
+            <li>Employee data <span>X</span></li>
+            <li>Employee data <span>X</span></li>
+            <li>Employee data <span>X</span></li>
+            <li>Employee data <span>X</span></li>
+            <li>Employee data <span>X</span></li>
+            <li>Employee data <span>X</span></li>
+            <li>Employee data <span>X</span></li>
+            <li>Employee data <span>X</span></li>
+            <li>Employee data <span>X</span></li>
+            <li>Employee data <span>X</span></li>
+            <li>Employee data <span>X</span></li>
+          </ul>
+        </div>
+        <div class="employee-information-cnt">
+          <span class="employee-information-cnt-header"
+            >Employee Information</span
+          >
+          <div class="employee-information">
+            <img class="employee-img" alt="employee-img" src="" />
+            <span class="employee-name">Employee Name</span>
+            <span class="employee-age">Employee Age</span>
+            <span class="employee-address">Employee Address</span>
+            <span class="employee-email">Employee email</span>
+            <span class="employee-mobile">Employee mobile</span>
+            <span class="employee-DOB">Employee DOB</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="add-employee-modal">
+        <form class="form-body">
+          <button class="form-close-btn">X</button>
+          <div class="name-field">
+            <input
+              class="form-item"
+              type="text"
+              placeholder="Enter first name"
+              name="firstName"
+            />
+            <input
+              class="form-item"
+              type="text"
+              placeholder="Enter last name"
+              name="lastName"
+            />
+          </div>
+          <input
+            class="form-item"
+            type="email"
+            placeholder="Enter email"
+            name="email"
+          />
+          <input
+            class="form-item"
+            type="password"
+            placeholder="Enter password"
+            name="password"
+          />
+          <input
+            class="form-item"
+            type="number"
+            placeholder="Enter age"
+            name="age"
+          />
+          <input
+            class="form-item"
+            type="number"
+            placeholder="Enter mobile number"
+            name="phone"
+          />
+          <input
+            class="form-item"
+            type="text"
+            placeholder="Enter address"
+            name="address"
+          />
+          <input
+            class="form-item"
+            id="date-input"
+            type="date"
+            placeholder="Enter Dob"
+            name="birthDate"
+          />
+          <button type="submit" class="form-submit-btn">Submit</button>
+        </form>
+      </section>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
