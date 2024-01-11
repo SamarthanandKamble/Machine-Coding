@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: 3rem auto;
+}
+
+.input-label {
+  padding: 1rem;
+}
+.input {
+  padding: 1rem;
+  width: 90%;
+}
+
+.clear-search-btn {
+  color: red;
+}
+
+.search-suggestions {
+  display: none;
+  height: 200px;
+  margin-top: 2rem;
+  border: 1px solid;
+  overflow: auto;
+}

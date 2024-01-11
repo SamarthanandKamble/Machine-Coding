@@ -1,7 +1,7 @@
 (async function () {
   const employeeListData = await fetch("./data.json");
   const employeeListJson = await employeeListData.json();
-  const employeeData = employeeListJson;
+  let employeeData = employeeListJson;
   // console.log(employeeData);
 
   const employeeListContainer = document.querySelector(".employee-list");
@@ -28,9 +28,16 @@
     }
 
     if (e.target.tagName.toLowerCase() === "span") {
-      let newEmployeeData = [...employeeListContainer?.children].filter(
-        (emp) => emp.id !== e.target.parentNode.getAttribute("id")
+      let newEmployeeData = employeeData.filter(
+        (emp) => String(emp.id) !== e.target.parentNode.getAttribute("id")
       );
+      console.log(e.target.parentNode.getAttribute("id"));
+      employeeData = newEmployeeData;
+      if (selectedEmployeeId === e.target.parentNode.getAttribute("id")) {
+        selectedEmployeeId = employeeData[0]?.id || -1;
+        displayTheEmployeeInformation(selectedEmployeeId);
+      }
+      generateEmployeeList();
     }
   });
 
@@ -43,6 +50,7 @@
     let empData = {};
     values.forEach((val) => (empData[val[0]] = val[1]));
     empData.id = employeeData[employeeData.length - 1].id + 1;
+    empData.image = "https://robohash.org/Terry.png?set=set4";
     addEmployeeModal.style.display = "none";
     formContainer.reset();
     employeeData.push(empData);
@@ -54,7 +62,10 @@
 
   const generateEmployeeList = () => {
     employeeListContainer.innerHTML = "";
-
+    if (String(selectedEmployeeId) === "-1") {
+      employeeListContainer.innerHTML = "";
+      return;
+    }
     employeeData.forEach((element) => {
       const li = document.createElement("li");
       li.innerHTML = `${element.firstName} ${element.lastName} <span>X</span>`;
