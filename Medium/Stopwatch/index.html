@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="hero">
+        <div class="hours-cnt">
+          <span>Hours</span>
+          <input
+            class="input input-hour"
+            type="number"
+            placeholder="00"
+            maxlength="2"
+            oninput="this.value
+          =this.value.slice(0,maxLength)"
+          />
+        </div>
+        <div class="min-cnt">
+          <span>Minutes</span>
+          <input
+            class="input input-min"
+            type="number"
+            placeholder="00"
+            maxlength="2"
+            oninput="this.value
+          =this.value.slice(0,maxLength)"
+          />
+        </div>
+        <div class="sec-cnt">
+          <span>Seconds</span>
+          <input
+            type="number"
+            class="input input-sec"
+            placeholder="00"
+            maxlength="2"
+            oninput="this.value
+          =this.value.slice(0,maxLength)"
+          />
+        </div>
+      </section>
+
+      <footer class="footer">
+        <button class="start-btn">Start</button>
+        <button class="state-btn">State</button>
+        <button class="reset-btn" disabled>Reset</button>
+      </footer>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
